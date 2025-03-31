@@ -47,4 +47,32 @@ FROM visita
 	ON visita.ip=lugar.ip
 	RIGHT JOIN jesuita 
 	ON visita.idJesuita=jesuita.idJesuita;
+	
+/*6*/
+
+SELECT nombre, lugar
+FROM visita 
+	RIGHT  JOIN lugar 
+	ON visita.ip=lugar.ip
+	LEFT JOIN jesuita 
+	ON visita.idJesuita=jesuita.idJesuita;
+
+/*7*/
+
+SELECT nombre, lugar
+FROM visita 
+	RIGHT  JOIN lugar 
+	ON visita.ip=lugar.ip
+	LEFT JOIN jesuita 
+	ON visita.idJesuita=jesuita.idJesuita
+	where nombre is null;
+
+/*8*/
+
+--DUDAS
+
+/*9*/
+
+/*10*/
+
 
