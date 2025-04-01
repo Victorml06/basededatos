@@ -73,6 +73,20 @@ FROM visita
 
 /*9*/
 
+SELECT distinct nombre
+        FROM visita INNER JOIN jesuita ON visita.idJesuita=jesuita.idJesuita;
+
 /*10*/
+SELECT Distinct lugar.ip,lugar
+        FROM visita INNER JOIN lugar on visita.ip=lugar.ip;Piensa otra consulta diferente con DISTINCT (con la misma base de datos).
 
+/*todos los operadores*/
 
+SELECT nombre,lugar
+FROM visita INNER JOIN lugar on visita.ip=lugar.ip
+    INNER JOIN jesuita ON visita.idJesuita=jesuita.idJesuita
+    WHERE jesuita.idJesuita in (1,2);
+
+SELECT *
+    FROM visita
+        WHERE fechaHora BETWEEN '2025-31-03 08:30:00' AND '2025-31-03 9:00:00';
